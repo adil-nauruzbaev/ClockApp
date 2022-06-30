@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Analog Clock',
+      title: 'Clock',
       theme: themeData(context),
       darkTheme: darkThemeData(context),
       themeMode: ThemeMode.dark,
