@@ -1,3 +1,4 @@
+import 'package:analog_clock/screens/companents/body.dart';
 import 'package:analog_clock/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     SizeConfig().init(context);
     return Scaffold(
       appBar: buildAppBar(context),
-      
+      body: Body(),
     );
   }
 
