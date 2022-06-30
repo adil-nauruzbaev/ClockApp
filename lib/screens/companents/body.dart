@@ -22,12 +22,6 @@ class Body extends StatelessWidget {
   }
 }
 
-var today = new DateTime.now();
-var fiftyDaysFromNow = today.add(new Duration(hours: 1));
-void fif() {
-  print(fiftyDaysFromNow);
-}
-
 class TimeInYearsHourAndMinute extends StatefulWidget {
   const TimeInYearsHourAndMinute({Key key}) : super(key: key);
 
@@ -42,17 +36,17 @@ class _TimeInYearsHourAndMinuteState extends State<TimeInYearsHourAndMinute> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    Timer.periodic(Duration(seconds: 1),(timer) {
-      if(_timeOfDay.minute != TimeOfDay.now().minute){
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      if (_timeOfDay.minute != TimeOfDay.now().minute) {
         setState(() {
           _timeOfDay = TimeOfDay.now();
         });
       }
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    String _period = _timeOfDay.period == DayPeriod.am ? "AM" : "PM";
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
