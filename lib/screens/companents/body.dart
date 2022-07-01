@@ -108,7 +108,6 @@ class _TimeInYearsHourAndMinuteState extends State<TimeInYearsHourAndMinute> {
 
   @override
   Widget build(BuildContext context) {
-    DateTime now = DateTime.now();
   String formattedDate = DateFormat.Hm().format(DateTime.now());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
