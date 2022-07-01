@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Clock',
       theme: themeData(context),
       darkTheme: darkThemeData(context),
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       home: HomeScreen(),
     );
   }
