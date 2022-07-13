@@ -1,7 +1,10 @@
+import 'package:analog_clock/screens/companents/timeinhours.dart';
 import 'package:analog_clock/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-class CountryCard extends StatelessWidget {
+import 'package:intl/intl.dart';
+
+class CountryCard extends StatefulWidget {
   const CountryCard({
     Key key,
     @required this.country,
@@ -13,8 +16,16 @@ class CountryCard extends StatelessWidget {
   final String country, timeZone, iconSrc, time, period;
 
   @override
+  State<CountryCard> createState() => _CountryCardState();
+}
+
+class _CountryCardState extends State<CountryCard> {
+  
+  @override
   Widget build(BuildContext context) {
+    String formattedDate = DateFormat.Hm().format(DateTime.now());
     return Padding(
+      
       padding:  EdgeInsets.only( left : getProportionateScreenWidth(20)),
       child: SizedBox(
         width: getProportionateScreenWidth(233),
@@ -31,7 +42,7 @@ class CountryCard extends StatelessWidget {
             child:
                 Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
               Text(
-                country,
+                widget.country,
                 style: Theme.of(context).textTheme.headline4.copyWith(
                       fontSize: getProportionateScreenWidth(16),
                     ),
@@ -39,23 +50,24 @@ class CountryCard extends StatelessWidget {
               SizedBox(
                 height: 5,
               ),
-              Text(timeZone),
+              Text(widget.timeZone),
               Spacer(),
               Row(
                 children: [
                   SvgPicture.asset(
-                    iconSrc,
+                    widget.iconSrc,
                     width: getProportionateScreenWidth(40),
                     color: Theme.of(context).accentIconTheme.color,
                   ),
                   Spacer(),
+                  
                   Text(
-                    time,
+                    formattedDate,
                     style: Theme.of(context).textTheme.headline4,
                   ),
                   RotatedBox(
                     quarterTurns: 3,
-                    child: Text(period),
+                    child: Text(widget.period),
                   )
                 ],
               )
