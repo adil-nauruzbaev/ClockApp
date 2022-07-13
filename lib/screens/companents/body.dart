@@ -1,8 +1,8 @@
-import 'dart:async';
 import 'package:analog_clock/constants.dart';
+import 'package:analog_clock/screens/companents/timeinhours.dart';
 import 'package:analog_clock/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
@@ -81,42 +81,3 @@ class ClockPainter extends CustomPainter {
   }
 }
 
-class TimeInYearsHourAndMinute extends StatefulWidget {
-  const TimeInYearsHourAndMinute({Key key}) : super(key: key);
-
-  @override
-  State<TimeInYearsHourAndMinute> createState() =>
-      _TimeInYearsHourAndMinuteState();
-}
-
-class _TimeInYearsHourAndMinuteState extends State<TimeInYearsHourAndMinute> {
-  TimeOfDay _timeOfDay = TimeOfDay.now();
-  
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    Timer.periodic(Duration(seconds: 1), (timer) {
-      if (_timeOfDay.minute != TimeOfDay.now().minute) {
-        setState(() {
-          _timeOfDay = TimeOfDay.now();
-        });
-      }
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-  String formattedDate = DateFormat.Hm().format(DateTime.now());
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          "$formattedDate",
-          style: Theme.of(context).textTheme.headline1,
-        )
-      ],
-    );
-  }
-}
