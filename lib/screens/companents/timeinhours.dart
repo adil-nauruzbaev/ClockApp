@@ -12,7 +12,6 @@ class TimeInYearsHourAndMinute extends StatefulWidget {
 
 class _TimeInYearsHourAndMinuteState extends State<TimeInYearsHourAndMinute> {
   TimeOfDay _timeOfDay = TimeOfDay.now();
-  
 
   @override
   void initState() {
@@ -29,7 +28,7 @@ class _TimeInYearsHourAndMinuteState extends State<TimeInYearsHourAndMinute> {
 
   @override
   Widget build(BuildContext context) {
-  String formattedDate = DateFormat.Hm().format(DateTime.now());
+    String formattedDate = DateFormat.Hm().format(DateTime.now());
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
