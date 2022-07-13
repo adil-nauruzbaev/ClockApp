@@ -1,10 +1,12 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:analog_clock/constants.dart';
+import 'package:analog_clock/models/my_theme_provider.dart';
 import 'package:analog_clock/screens/companents/calculator_hours.dart';
 import 'package:analog_clock/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:provider/provider.dart';
 
 class Clock extends StatefulWidget {
   const Clock({Key key}) : super(key: key);
@@ -60,11 +62,18 @@ class _ClockState extends State<Clock> {
           top: 50,
           left: 0,
           right: 0,
-          child: SvgPicture.asset(
-            'assets/icons/Sun.svg',
-            height: 24,
-            width: 24,
-            color: Theme.of(context).primaryColor,
+          child: Consumer<MyThemeModel>(
+            builder: (context, theme, child) => GestureDetector(
+              onTap: () => theme.changeTheme(),
+              child: SvgPicture.asset(
+                theme.isLightTheme
+                    ? 'assets/icons/Sun.svg'
+                    : 'assets/icons/Moon.svg',
+                height: 24,
+                width: 24,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
           ),
         )
       ],
