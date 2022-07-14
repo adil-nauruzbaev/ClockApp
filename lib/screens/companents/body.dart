@@ -14,13 +14,14 @@ class Body extends StatelessWidget {
     return SafeArea(
       child: SizedBox(
         width: double.infinity,
+        height: double.infinity,
         child: Column(
           children: [
+            
             Text(
-              "Dasha ♥ Adil",
+              "Начал изучать",
               style: Theme.of(context).textTheme.headline4,
             ),
-            
             TestScreen(),
             Spacer(),
             Clock(),
@@ -47,9 +48,7 @@ class Body extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Spacer(),
-            Spacer(),
-            Spacer(),
+            
           ],
         ),
       ),

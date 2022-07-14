@@ -67,8 +67,8 @@ class _ClockState extends State<Clock> {
               onTap: () => theme.changeTheme(),
               child: SvgPicture.asset(
                 theme.isLightTheme
-                    ? 'assets/icons/Sun.svg'
-                    : 'assets/icons/Moon.svg',
+                    ? 'assets/icons/Moon.svg'
+                    : 'assets/icons/Sun.svg',
                 height: 24,
                 width: 24,
                 color: Theme.of(context).primaryColor,
