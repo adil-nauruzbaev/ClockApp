@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:analog_clock/screens/companents/timeinhours.dart';
 import 'package:analog_clock/size_config.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +22,19 @@ class CountryCard extends StatefulWidget {
 }
 
 class _CountryCardState extends State<CountryCard> {
-  
+  TimeOfDay _timeOfDay = TimeOfDay.now();
+   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    Timer.periodic(Duration(seconds: 1), (timer) {
+      if (_timeOfDay.minute != TimeOfDay.now().minute) {
+        setState(() {
+          _timeOfDay = TimeOfDay.now();
+        });
+      }
+    });
+  }
   @override
   Widget build(BuildContext context) {
     String formattedDate = DateFormat.Hm().format(DateTime.now());
