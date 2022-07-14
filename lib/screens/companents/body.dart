@@ -28,17 +28,18 @@ class Body extends StatelessWidget {
                   CountryCard(
                     country: "Volgograd, RUS",
                     timeZone: "+3 HRS | GMT",
-                    iconSrc: "assets/icons/Liberty.svg",
+                    iconSrc: "assets/icons/volg.svg",
                     time: "",
                     period: "HM",
                   ),
                   CountryCard(
                     country: "Nur-Sultan, KAZ",
                     timeZone: "+6 HRS | GMT",
-                    iconSrc: "assets/icons/Sydney.svg",
-                    time: " " ,
+                    iconSrc: "assets/icons/nur.svg",
+                    time: "",
                     period: "HM",
                   ),
+                  
                 ],
               ),
             ),
