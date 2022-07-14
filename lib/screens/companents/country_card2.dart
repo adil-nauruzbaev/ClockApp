@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 
-class CountryCard extends StatefulWidget {
-  const CountryCard({
+class CountryCard2 extends StatefulWidget {
+  const CountryCard2({
     Key key,
     @required this.country,
     @required this.timeZone,
@@ -17,10 +17,10 @@ class CountryCard extends StatefulWidget {
   final String country, timeZone, iconSrc, time, period;
 
   @override
-  State<CountryCard> createState() => _CountryCardState();
+  State<CountryCard2> createState() => _CountryCardState();
 }
 
-class _CountryCardState extends State<CountryCard> {
+class _CountryCardState extends State<CountryCard2> {
   TimeOfDay _timeOfDay = TimeOfDay.now();
    @override
   void initState() {
@@ -77,7 +77,7 @@ class _CountryCardState extends State<CountryCard> {
                   Spacer(),
                   
                   Text(
-                    fiftyDaysFromNow.toString(),
+                    formattedDate,
                     style: Theme.of(context).textTheme.headline4,
                   ),
                   RotatedBox(

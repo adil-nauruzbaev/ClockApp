@@ -1,7 +1,10 @@
 import 'package:analog_clock/screens/companents/clock.dart';
 import 'package:analog_clock/screens/companents/country_card.dart';
+import 'package:analog_clock/screens/companents/country_card2.dart';
+import 'package:analog_clock/screens/companents/test_screen.dart';
 import 'package:analog_clock/screens/companents/timeinhours.dart';
 import 'package:flutter/material.dart';
+
 
 class Body extends StatelessWidget {
   const Body({Key key}) : super(key: key);
@@ -14,10 +17,11 @@ class Body extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              "Nur-Sultan, KAZ | GMT",
-              style: Theme.of(context).textTheme.bodyText1,
+              "Dasha ♥ Adil",
+              style: Theme.of(context).textTheme.headline4,
             ),
-            TimeInYearsHourAndMinute(),
+            
+            TestScreen(),
             Spacer(),
             Clock(),
             Spacer(),
@@ -25,7 +29,7 @@ class Body extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                  CountryCard(
+                  CountryCard2(
                     country: "Volgograd, RUS",
                     timeZone: "+3 HRS | GMT",
                     iconSrc: "assets/icons/volg.svg",
@@ -39,10 +43,12 @@ class Body extends StatelessWidget {
                     time: "",
                     period: "HM",
                   ),
-                  
                 ],
               ),
             ),
+            Spacer(),
+            Spacer(),
+            Spacer(),
             Spacer(),
           ],
         ),
@@ -50,4 +56,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
