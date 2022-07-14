@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
           children: [
             
             Text(
-              "Начал изучать",
+              "Dasha ♥ Adil",
               style: Theme.of(context).textTheme.headline4,
             ),
             TestScreen(),
