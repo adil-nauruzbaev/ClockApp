@@ -1,16 +1,20 @@
-# first
+# Clock App
 
-A new Flutter project.
+The project is an online store. It is written according to the technical task and layout of Figma.
 
-## Getting Started
+## Technologies that are involved:
+- Dart
+- Flutter
+- Themes
+- DateTime
+- Cards
+- Clock
+- Git
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Application video:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+https://user-images.githubusercontent.com/106264625/203909848-ff33b680-cff2-4d96-a4fb-2c13c659df82.mp4
+
