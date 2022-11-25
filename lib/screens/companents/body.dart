@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
           children: [
             
             Text(
-              "Я начал изучать",
+              "Я начал изучать Flutter",
               style: Theme.of(context).textTheme.headline4,
             ),
             TestScreen(),
@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
               child: Row(
                 children: [
                   CountryCard2(
-                    country: "Volgograd, RUS",
+                    country: "Moscow, RUS",
                     timeZone: "+3 HRS | GMT",
                     iconSrc: "assets/icons/volg.svg",
                     time: "",

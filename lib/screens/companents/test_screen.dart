@@ -18,7 +18,7 @@ class _TestScreenState extends State<TestScreen> {
   @override
   void initState() {
     ///инициализируем счётчик базовым значением (2 часа назад от момента запуска)
-    timerExample = TimerExample(dateTime: DateTime.parse("2020-08-27"));
+    timerExample = TimerExample(dateTime: DateTime.parse("2022-06-01"));
 
     ///вызываем и запускаем таймер
     timerExample?.startTimer();
